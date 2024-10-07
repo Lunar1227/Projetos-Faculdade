@@ -22,7 +22,7 @@ input:hover, button:hover, select:hover, textarea:hover { /*Ativa borda e sombra
 #cadastro { /*Formatação da caixa no meio*/
     width: 650px; /*Largura da caixa*/
     height: 400px; /*Altura da caixa*/
-    top: 32%; /*Move a caixa 32% para baixo */
+    top: 40%; /*Move a caixa 32% para baixo */
     left: 5%; /*Move a caixa 41.5% para a esquerda*/
     border: 1px double black; /*Tipo e espessura*/
     position: absolute; /*Representação do layout da caixa*/
@@ -32,13 +32,13 @@ input:hover, button:hover, select:hover, textarea:hover { /*Ativa borda e sombra
     transform: rotate(90); /*Rotação da caixa*/
     background-color: white; /*Cor da caixa*/
     text-indent: 95px; /*Define o recuo do texto*/
-    position: fixed; /*Fixa o quadrado na tela*/
+     /*Fixa o quadrado na tela*/
 }
 
 #cadastro2 { /*Formatação da caixa no meio*/
     width: 650px; /*Largura da caixa*/
     height: 400px; /*Altura da caixa*/
-    top: 32%; /*Move a caixa 32% para baixo */
+    top: 40%; /*Move a caixa 32% para baixo */
     left: 50%; /*Move a caixa 50% para a esquerda*/
     border: 1px double black; /*Tipo e espessura*/
     position: absolute; /*Representação do layout da caixa*/
@@ -48,11 +48,11 @@ input:hover, button:hover, select:hover, textarea:hover { /*Ativa borda e sombra
     transform: rotate(90); /*Rotação da caixa*/
     background-color: white; /*Cor da caixa*/
     text-indent: 50px; /*Define o recuo do texto*/
-    position: fixed; /*Fixa o quadrado na tela*/
+     /*Fixa o quadrado na tela*/
 }
 
 #botoes { /*Posição dos botões*/
-    margin-top: 550px;
+    margin-top: 450px;
     text-align: center;
 }
 
