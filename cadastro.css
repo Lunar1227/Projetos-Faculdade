@@ -4,14 +4,22 @@ header { /*Imagem no topo*/
     background-position: center;
 }
 
+html, body {
+    height: 100%; /* Faz com que o body ocupe toda a altura da janela */
+    margin: 0; /* Remove a margem padrão do body */
+    font-family:Arial, Helvetica, sans-serif
+}
+
+
 
 
 input, select, button, textarea { /*Formatação dos campos de entrada*/
     border-radius: 4em; /*Bordas arredondadas */
     padding: 5px; /*Espaçamento entre o conteudo e borda*/
-    margin: 5px; /*Espaço entre caixa e marguem da página*/
+    margin: 5px; /*Espaço entre caixa a margin da página*/
     height: 6%; /*Altura da caixa*/
     font-family: 'Times New Roman', Times, serif; /*Fonte do texto*/
+    font-size: 100%;
 }
 
 input:hover, button:hover, select:hover, textarea:hover { /*Ativa borda e sombra ao passar o mouse*/
@@ -19,40 +27,33 @@ input:hover, button:hover, select:hover, textarea:hover { /*Ativa borda e sombra
     box-shadow: 1px 1px 2px silver;
 }
 
-#cadastro { /*Formatação da caixa no meio*/
-    width: 650px; /*Largura da caixa*/
-    height: 400px; /*Altura da caixa*/
-    top: 40%; /*Move a caixa 32% para baixo */
-    left: 5%; /*Move a caixa 41.5% para a esquerda*/
-    border: 1px double black; /*Tipo e espessura*/
-    position: absolute; /*Representação do layout da caixa*/
-    padding: 10px; /*Espaçamento entre o conteudo e borda*/
-    border-radius: 5%; /*Bordas arredondadas*/
-    box-sizing: border-box; /*Largura e altura compreenderãp o tamanho maximo do box*/
-    transform: rotate(90); /*Rotação da caixa*/
-    background-color: white; /*Cor da caixa*/
-    text-indent: 95px; /*Define o recuo do texto*/
-     /*Fixa o quadrado na tela*/
+
+.cadastro {
+    display: flex; /* Flexbox para as caixas */
+    justify-content: space-between; /* Espaço igual entre as caixas */
+    width: 90%; /* Largura responsiva */
+    max-width: 1200px; /* Limite máximo da largura */
+    background-color: white; /* Fundo branco para as caixas */
+    border-radius: 5px; /* Bordas arredondadas para a seção */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    
 }
 
-#cadastro2 { /*Formatação da caixa no meio*/
-    width: 650px; /*Largura da caixa*/
-    height: 400px; /*Altura da caixa*/
-    top: 40%; /*Move a caixa 32% para baixo */
-    left: 50%; /*Move a caixa 50% para a esquerda*/
-    border: 1px double black; /*Tipo e espessura*/
-    position: absolute; /*Representação do layout da caixa*/
-    padding: 10px; /*Espaçamento entre o conteudo e borda*/
-    border-radius: 5%; /*Bordas arredondadas*/
-    box-sizing: border-box; /*Largura e altura compreenderãp o tamanho maximo do box*/
-    transform: rotate(90); /*Rotação da caixa*/
-    background-color: white; /*Cor da caixa*/
-    text-indent: 50px; /*Define o recuo do texto*/
-     /*Fixa o quadrado na tela*/
+#caixaesquerda, #caixadireita {
+    flex: 1; /* Ambas as caixas ocupam espaço igual */
+    margin: 0 10px; /* Margem lateral entre as caixas */
+    padding: 20px; /* Espaçamento interno nas caixas */
+    border: 1px solid #ccc; /* Bordas para as caixas */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #ffffff; /* Cor de fundo das caixas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil nas caixas */
+    height: 600px;
+    
 }
 
 #botoes { /*Posição dos botões*/
-    margin-top: 450px;
+    margin-top: 5%;
     text-align: center;
 }
 
@@ -102,13 +103,20 @@ h4 { /*Título da segunda caixa*/
     color: #468749; /*Cor*/
 }
 
+p {
+    color:#468749;
+    margin-left: 10px;
+    
+
+}
 
 
 /*Tela responsiva*/
 /* Estilos para telas menores */
-@media (max-width: 768px) {
-    button {
-        width: 100%; /* Botões ocupam 100% em telas menores */
-        margin-bottom: 10px;
-    }
-}
+@media (min-width: 768px) {
+    /* Estilos para tablets */
+  }
+  
+  @media (min-width: 1024px) {
+    /* Estilos para desktops */
+  }
