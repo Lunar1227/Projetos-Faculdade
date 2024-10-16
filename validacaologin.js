@@ -1,14 +1,19 @@
-document.getElementById('formulariologin').addEventListener('submit'), function(event){
-    event.preventDefault();//Impede o envio do formulário
+function validarlogin() {
 
-    const usuario = document.getElementById('usuario').value.trim();
-    const senha = document.getElementById('senha').value.trim();
-    
-    const mensagemDiv = document.getElementById('mensagem');
-    mensagemDiv.textContent = '';
+    var usuario = document.getElementById('usuario').value;
 
-    if (!usuario || !senha) {
-        mensagemDiv.textContent = 'Os campos devem ser preenchidos obrigatoriamente.';
-        return;
+    var senha = document.getElementById('senha').value;
+
+    if (usuario === "") {
+        alert('Usuário não informado');
+        return false
     }
-}
+
+    if (senha === "") {
+        alert('Senha não informada')
+        return false
+    }
+
+    window.location.href = "telasobrenos.html";
+
+} 
