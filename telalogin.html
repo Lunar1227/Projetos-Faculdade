@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
-    <form name="formulariologin" action="action_page.php"  autocomplete="off" target="_blank" novalidate>
+    <form name="formulariologin" action="#"  autocomplete="off" target="_blank" novalidate onsubmit="return validarlogin()">
         <div id="comeco">
             <h1>Login</h1>
-            <input type="text" placeholder="Usuário:" id="usuario" maxlength="6" size="31" required>
+            <input type="text" placeholder="Usuário:" id="usuario" maxlength="6" size="31">
             <br>
             <br>
-            <input type="password" placeholder="Senha:" id="senha" maxlength="8" size="31" required>
+            <input type="password" placeholder="Senha:" id="senha" maxlength="8" size="31">
             <br>
             <br>
-            <button><a href="telasobrenos.html" class="botaoverde">ENTRAR</a></button>
+            <button type="button" class="botaoverde" id="entrar" onclick="validarlogin()">ENTRAR</button>
             <br>
             <br>
             <button><a href="telacadastro.html" class="botaoverde">CADASTRE-SE</a></button>
@@ -26,6 +26,5 @@
             <p><a href="telaesquecisenha.html" target="_blank">Esqueci minha senha</a></p>
         </div>
     </form>
-    <div id="mensagem" style="color:brown;"></div>
 </body>
 </html>
