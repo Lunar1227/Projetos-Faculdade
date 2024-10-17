@@ -1,79 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro - Eco Point</title>
     <link rel="shortcut icon" href="../imagens/icone.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/cadastro.css">
-    </head>
-
+    <script src="../javascript/validacaocadastro.js" defer></script> <!-- Adicionado defer para garantir que o JS seja carregado após o HTML -->
+</head>
+    
 <body>
 
     <header></header>
-    <h2>Cadastra-se</h2>
 
-    <section class="cadastro">
+    <h2>Cadastre-se</h2>
 
-        <div id="caixaesquerda">
-            <h3>ENTRE NO MUNDO MAIS VERDE.</h3>
-            <br>
-            <input type="text" placeholder="Nome Completo:" minlength="15" maxlength="80" size="50" required>
-            <br>
-            <br>
-            <strong><p>Data de nascimento:</p></strong>
-            <input type="date" size="50" required>
-            <br>
-            <br>
-            <strong><p>Sexo:</p></strong>
-            <select id="genero">
-                <option value="1">Feminino</option>
-                <option value="2">Masculino</option>
-                <option value="3">Outro</option>
-            </select>
-            <br>
-            <br>
-            <input type="text" placeholder="Crie seu usuário:" maxlength="6" size="50" required>
-            <br>
-            <br>
-            <input type="password" placeholder="Crie sua senha:" maxlength="8" size="50" required>
-            <br>
-            <br>
-            <input type="password" placeholder="Confirme sua senha:" maxlength="8" size="50" required>
-            <br>
-            <br>
-        </div>
+    <form name="formulariocadastro" onsubmit="validarcadastro(event)"> <!-- Removi o action e method -->
+        <section class="cadastro">
+
+            <div id="caixaesquerda">
+                <h3>ENTRE NO MUNDO MAIS VERDE.</h3>
+                <br>
+                <input type="text" placeholder="Nome Completo:" minlength="15" maxlength="80" size="50" id="nomecompleto">
+                <br><br>
+                <strong><p>Data de nascimento:</p></strong>
+                <input type="date" id="datanascimento">
+                <br><br>
+                <strong><p>Sexo:</p></strong>
+                <select id="genero">
+                    <option value="1">Feminino</option>
+                    <option value="2">Masculino</option>
+                    <option value="3">Outro</option>
+                </select>
+                <br><br>
+                <input type="text" placeholder="Crie seu usuário:" maxlength="6" size="50" id="campousuario">
+                <br><br>
+                <input type="password" placeholder="Crie sua senha:" maxlength="8" size="50" id="camposenha">
+                <br><br>
+                <input type="password" placeholder="Confirme sua senha:" maxlength="8" size="50" id="confirmasenha">
+                <br><br>
+            </div>
+        
+            <div id="caixadireita">
+                <h4>Informações Complementares:</h4>
+                <br>
+                <input type="number" placeholder="CEP:" pattern="[0-9]{8}" id="cep">
+                <br><br>
+                <input type="text" placeholder="Endereço:" size="50" id="endereco">
+                <br><br>
+                <input type="text" placeholder="Complemento:" size="50" id="complemento">
+                <br><br>
+                <strong><p>Telefone:</p></strong>
+                <input type="tel" placeholder="(XX) XXXXX-XXXX" size="50" required id="tel"> <!-- Ajustei o placeholder -->
+                <br><br>
+                <input type="text" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="Digite seu CPF" size="50" id="cpf">
+                <br><br>
+                <input type="email" placeholder="Digite seu e-mail:" size="50" required id="inserirEmail">
+                <br><br>
+            </div>
     
-        <div id="caixadireita">
-            <h4>Informações Complementares:</h4>
-            <br>
-            <input type="number" placeholder="CEP:" pattern="[0-9]{8}" required>
-            <br>
-            <br>
-            <input type="text" placeholder="Endereço:" size="50">
-            <br><br>
-            <input type="text" placeholder="Complemento:" size="50">
-            <br>
-            <br>
-            <strong><p>Telefone:</p></strong>
-            <input type="text" placeholder=" (DD) 9 9999-9999" size="50" required>
-            <br>
-            <br>
-            <input type="text" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="Digite seu CPF" size="50" required>
-            <br>
-            <br>
-            <input type="email" placeholder="Digite seu e-mail:" size="50" required>
-            <br>
-            <br>
-        </div>
+        </section>
+    
+        <section id="botoes">
+            <button type="submit">CADASTRAR</button> <!-- Alterado para submit -->
+            <button type="button" id="botaovoltar" onclick="voltar()">VOLTAR</button> 
+            <button type="reset" id="botaolimpar">LIMPAR</button>
+        </section>
 
-    </section>
-
-    <section id="botoes">
-        <button><a href="telalogin.html">CADASTRAR</a></button> 
-        <button><a href="telalogin.html">VOLTAR</a></button> 
-        <button>LIMPAR</button>
-    </section>
+    </form>
     
 </body>
 </html>
