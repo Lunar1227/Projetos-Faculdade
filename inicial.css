@@ -1,0 +1,158 @@
+header { /*Imagem no topo*/
+    background-image: url(../imagens/barracadastro.png); /*Imagem*/
+    padding: 6em; /*Espaçamento entre o conteudo e borda*/
+    background-position: center; /*Colocando a imagem no centro*/
+  }
+  
+  
+  
+  input { /*Formatação do campo*/
+    border-radius: 1em; /*Bordas arredondadas*/
+    padding: 5px; /*Espaçamento entre o conteúdo e borda*/
+    margin-top: 1em; /*Move o input 1em para a baixo*/
+    margin-left: 30%; /*Espaço entre caixa e margem da página*/
+    height: 6%; /*Altura da caixa*/
+  }
+  
+  
+  
+  .noticias { /*Todas as notícias juntas*/
+    display: flex; /*Organiza os elementos*/
+    justify-content: center; /*Alinha os elementos no centro*/
+    gap: 20px; /*Espaçamento entre os elementos*/
+    padding: 4%; /*Espaçamento interno nas caixas*/
+  }
+  
+  .item { /*Cada item por si só*/
+    width: 200px; /*Largura*/
+    background-color: white; /*Cor do fundo*/
+    border-radius: 8px; /*Bordas arredondadas para a seção*/
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /*Sombra sutil*/
+    overflow: hidden; /*Dimensões eccedidas*/
+  }
+  
+  .item:hover {
+    transform: scale(1.05); /*Modifica as dimensões do objeto proporcionalmente*/
+  }
+  
+  .news-image { /*imagem*/
+    width: 100%; /*Largura*/
+    height: auto; /*Mantém a proporção da imagem*/
+  }
+  
+  .titulo {
+    font-weight: bold; /*Deixa em negrito*/
+    padding: 10px; /*Espaçamento entre o conteudo e borda*/
+    background-color: #468749; /*Cor da caixa*/
+    color: white; /*Cor da fonte*/
+  }
+  
+  .item.expanded .noticias {
+    display: block; /*Mostra o conteúdo ao expandir*/
+  }
+  
+  .lermais {
+    display: block; /*Mostra o conteúdo ao expandir*/
+    text-align: center; /*Alinha o texto no centro*/
+    padding: 10px; /*Espaçamento entre o conteudo e borda*/
+    background-color: #468749; /*Cor da caixa*/
+    color: white; /*Cor da fonte*/
+    text-decoration: none; /*Remove o sublinhado*/
+  }
+  
+  .lermais:hover {
+    background-color: #2c612f; /*Cor de fundo*/
+  }
+  
+  
+  
+  .ler {
+    color: black; /*Cor da fonte*/
+  }
+  
+  p { /*O texto escrito no site*/
+    font-size: 20px; /*Tamanho*/
+    font-family: 'Times New Roman', Times, serif; /*Fonte*/
+    margin: 20px; /*Margem lateral*/
+    flex: 1; /*Alinha espaços*/
+    margin-right: 20px; /*Espaço entre texto e imagem*/
+  }
+    
+  h1 { /*Título do site*/
+    color: #468749; /*Cor do texto*/
+    font-family: 'Times New Roman', Times, serif; /*Fonte das letras*/
+    font-size: 35px; /*Tamanho da fonte*/
+  }
+  
+  
+  
+  button { /*Botão ENTRAR*/
+    text-align: center; /*Centralizar texto*/
+    width: 7em; /*Largura*/
+    height: 2em; /*Altura*/
+    margin-left: 93%; /*Move o button 93% para a esquerda*/
+    background-color: #468749; /*Cor do botão*/
+  }
+  
+  a { /*Link de ENTRAR*/
+    text-decoration: none; /*Remove o sublinhado*/
+    color: white; /*Cor da letra*/
+    font-family: 'Times New Roman', Times, serif; /*Fonte*/
+  }
+  
+  
+  
+  footer { /*Rodape completo*/
+    background-color: #468749; /*Cor do rodape*/
+    color: white; /*Cor do texto*/
+    padding: 20px; /*Espaçamento entre o conteudo e borda*/
+  }
+  
+  .footer-container { /*Todos os div estão dentro dessa classe*/
+    display: flex; /*Utilizada para organizar os elementos*/
+    justify-content: space-between; /*Distribui os elementos de forma igual ao longo da linha*/
+    width: 70%; /*Largura*/
+  }
+  
+  .integrantes, .contatos { /*As duas listas*/
+    margin: 0 20px; /*Margem lateral*/
+  }
+  
+  .contatos { /*Lista de contato*/
+    margin-bottom: 10px; /*Margem de botão*/
+  }
+  
+  .lista { /*Lista dos nomes */
+    list-style-type: none; /*Maneira abreviada de se escrever uma só declaração para duas das propriedades para listas*/
+    padding: 0; /*Espaçamento entre o conteudo e borda*/
+  }
+  
+  .nome { /*Os próprios nomes*/
+    margin: 5px 0; /*Margem lateral*/
+  }
+  
+  .contact-item { /*Os próprios itens*/
+    display: flex; /*Utilizada para organizar os elementos*/
+    align-items: center; /*Controlar o alinhamento de itens*/
+    margin: 5px 0; /*Margem lateral*/
+  }
+  
+  .contact-item i { /*Icones*/
+    margin-right: 5px; /*Move os itens a 5px para a esquerda*/
+    color: #fff; /*Cor do ícone */
+  }
+  
+  .fas, .fab { /*Estilos para ícones*/
+    font-size: 18px; /*Tamanho da fonte*/
+  }
+  
+  
+  
+  /*Tela responsiva*/
+  /*Estilos para telas menores*/
+  @media (max-width: 768px) {
+    button {
+      width: 100%; /*Botões ocupam 100% em telas menores*/
+      margin-bottom: 10px;
+    }
+  }
