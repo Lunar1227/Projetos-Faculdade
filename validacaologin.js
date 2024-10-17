@@ -20,7 +20,7 @@ function recuperardados(){
 }
 
 
-//Verifica se os campos estão preenchidos ou não
+// essa função Verifca se os campos estão preenchidos ou não
 function validarlogin() {
 
     var usuario = document.getElementById('usuario').value;
