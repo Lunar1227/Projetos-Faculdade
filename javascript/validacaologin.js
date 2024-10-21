@@ -1,26 +1,33 @@
-function recuperardados(){
 
-    var campousuario = document.getElementById('usuario').value;
+// function recuperardados(){
 
-    var camposenha = document.getElementById('senha').value;
 
-    var login = localStorage.getItem('usuario1');
+//     var campousuario = document.getElementById('usuario').value;
 
-    var senha = localStorage.getItem('senha1');
+//     var camposenha = document.getElementById('senha').value;
 
+//     var usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+//     var usuarioEncontrado = usuarios.find(function SalvarDados() {
+//     return usuario.nome === campousuario && usuario.senha === camposenha;
+//     });
+
+//     if (usuarioEncontrado) {
+//     alert('Login bem-sucedido!');
+//     window.location.href = "../html/telasobrenos.html";
+//     } else {
+//     alert('Usuário ou senha incorretos.');
     
-    if (campousuario == login && camposenha === senha) {
-        alert('Login efetuado com sucesso!')
-        window.location.href = "../html/telasobrenos.html";
+//     }
+// }
 
-    } else {
-        alert('Usuário ou senha incorreto')
-    } 
-    
-}
 
+
+// }
 
 // essa função Verifca se os campos estão preenchidos ou não
+
+
 function validarlogin() {
 
     var usuario = document.getElementById('usuario').value;
@@ -37,7 +44,19 @@ function validarlogin() {
         return false;
     }
 
-    recuperardados();
+    senha_salva = JSON.parse(localStorage.getItem('chamandosenha'));
+
+    usuario_salvo = JSON.parse(localStorage.getItem('chamandousu'));
+
+    if (usuario === usuario_salvo && senha === senha_salva) {
+        window.location.href = "../html/telasobrenos.html"
+
+
+    } else {
+        alert ('Usuário ou senha incorreto!')
+    }
+
+    console.log('Os dados foram carregados!')
     return false;
 
 } 
