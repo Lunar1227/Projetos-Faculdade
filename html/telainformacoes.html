@@ -10,6 +10,21 @@
 </head>
 <body>
     <header></header>
+
+    <script>
+        // Recupera o usuário logado do localStorage
+        const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
+    
+        // Verifica se o nome do usuário existe
+        if (usuarioLogado) {
+        // Seleciona o elemento onde quer exibir o nome
+        const nomenatela = document.getElementById('nomenatela');
+        
+        // Define o texto interno do elemento como o nome do usuário
+        nomenatela.innerText = `Bem-vindo, ${usuarioLogado.login}!`;
+    }
+    </script>
+
     <nav id="menu">
         <ul class="menu3">
             <a href="./telasobrenos.html">Sobre Nós</a>
@@ -17,6 +32,16 @@
             <a href="./telaongs.html">Ong's</a>
             <a href="./telamapa.html">Mapa</a>
         </ul>
+
+        <ul class="primeiroul">
+            <li class="primeiroli">
+                <p id="nomenatela"></p>
+                <ul class="segundoul">
+                    <li class="segundoli"><a href="#">Sair</a></li>
+                </ul>
+            </li>
+        </ul>
+
     </nav>
     <br>
     <br>
