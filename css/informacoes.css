@@ -4,6 +4,54 @@ header { /*Imagem no topo*/
   background-position: center;
 }
 
+.primeiroul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.primeiroli {
+  position: relative;
+  display: inline-block;
+}
+
+#nomenatela {
+  background-color: #04AA6D;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.segundoul {
+  display: none;
+  position: absolute;
+  top: 100%; /* Posiciona abaixo do item pai */
+  left: 0;
+  background-color: grey;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: auto;
+}
+
+.primeiroli:hover .segundoul {
+  display: block; /* Mostra o submenu ao passar o mouse */
+}
+
+.segundoli {
+  padding: 10px;
+}
+
+.segundoli a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.segundoli:hover {
+  background-color: darkgrey;
+}
 
 
 img {
@@ -60,6 +108,7 @@ a:hover:not(#menu) { /*Ativa quando passa o mouse por cima dos links no menu*/
 }
   
 #menu { /*Os links no menu*/
+  position: relative;
   background-color: #04AA6D; /*Cor da caixa*/
 }
 
