@@ -19,6 +19,7 @@ function recuperarDados() {
     //Aqui é um if básico, se os dados da variável acima forem encontrados, aparece o alerta de login bem sucedido
     // e direciona para a tela sobre nós, caso não vai alertar que o usuário e a senha estão incorretos.
     if (usuarioEncontrado) {
+        localStorage.setItem('usuarioLogado', JSON.stringify(usuarioEncontrado));
         alert('Login bem-sucedido!');
         window.location.href = "../html/telasobrenos.html";
     } else {
