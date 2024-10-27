@@ -17,7 +17,53 @@ img {
     float: right;
 }
 
+/*ESTILIZAÇÃO ONDE APARECE O NOME DO USUÁRIO E O BOTÃO DE SAIR*/
 
+section {
+    margin: 5%;
+  }
+  
+  div > #nomenatela {
+    display: inline-block;
+    z-index: 20;
+  }
+  
+  div > .Sair {
+    display: inline-block;
+    z-index: 20;
+  }
+  
+  .Sair {
+    background-color: #2c612f;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    padding: 11px 21px;
+    font-size: 17px;
+    position: absolute; /*Posso alterar as caixas de lugar, colocando as propriedades left, top, bottom e right*/
+    margin-top: 3.5px;
+    left: 1200px;
+    cursor: pointer;
+  }
+  
+  .Sair:hover{
+    background-color: rgb(139, 8, 8);
+  }
+  
+  #nomenatela {
+    background-color: #2c612f;;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    padding: 11px 21px;
+    font-size: 17px;
+    position: absolute;
+    left: 1010px; /*Posso alterar as caixas de lugar, colocando as propriedades left, top, bottom e right*/
+    margin-top: 3.5px;
+  
+  }
+  
+  /* ^^ FINAL DA ESTILIZAÇÃO ^^ */
 
 .menu4 { /*Menu no topo da página*/
     margin: 0px; /*Espaço entre caixa e marguem da página*/
@@ -25,6 +71,7 @@ img {
     background-color: #468749; /*Cor da caixa*/
     text-indent: 40px; /*Recuo da linha*/
     text-align: center;
+    z-index: 10;
 }
 
 a { /*Os links no menu*/
