@@ -2,7 +2,7 @@ header { /*Imagem no topo*/
     background-image: url(../imagens/barracadastro.png); /*Imagem*/
     padding: 6em; /*Espaçamento entre o conteudo e borda*/
     background-position: center; /*Colocando a imagem no centro*/
-  }
+}
   
   
   
@@ -12,7 +12,7 @@ header { /*Imagem no topo*/
     margin-top: 1em; /*Move o input 1em para a baixo*/
     margin-left: 30%; /*Espaço entre caixa e margem da página*/
     height: 6%; /*Altura da caixa*/
-  }
+}
   
   
   
@@ -21,7 +21,7 @@ header { /*Imagem no topo*/
     justify-content: center; /*Alinha os elementos no centro*/
     gap: 20px; /*Espaçamento entre os elementos*/
     padding: 4%; /*Espaçamento interno nas caixas*/
-  }
+}
   
   .item { /*Cada item por si só*/
     width: 200px; /*Largura*/
@@ -64,8 +64,6 @@ header { /*Imagem no topo*/
     background-color: #2c612f; /*Cor de fundo*/
   }
   
-  
-  
   .ler {
     color: black; /*Cor da fonte*/
   }
@@ -84,22 +82,25 @@ header { /*Imagem no topo*/
     font-size: 35px; /*Tamanho da fonte*/
   }
   
-  
-  
-  button { /*Botão ENTRAR*/
-    text-align: center; /*Centralizar texto*/
-    width: 7em; /*Largura*/
-    height: 2em; /*Altura*/
-    margin-left: 93%; /*Move o button 93% para a esquerda*/
-    background-color: #468749; /*Cor do botão*/
+  section > div {
+    display: inline-block;
+  }
+
+  #linkcadastrese, #linkentrar {
+    background-color: #1d8122;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    padding: 11px 21px;
+    font-size: 17px;
+    position: relative; /*Posso alterar as caixas de lugar, colocando as propriedades left, top, bottom e right*/
+    left: 1056px;
+
   }
   
-  a { /*Link de ENTRAR*/
-    text-decoration: none; /*Remove o sublinhado*/
-    color: white; /*Cor da letra*/
-    font-family: 'Times New Roman', Times, serif; /*Fonte*/
+  #linkcadastrese:hover, #linkentrar:hover {
+    background-color: #135716;
   }
-  
   
   
   footer { /*Rodape completo*/
