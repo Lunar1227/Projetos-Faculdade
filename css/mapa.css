@@ -4,7 +4,52 @@ header { /*Imagem no topo*/
     background-position: center;
 }
 
+/*ESTILIZAÇÃO ONDE APARECE O NOME DO USUÁRIO E O BOTÃO DE SAIR*/
 
+section {
+    margin: 5%;
+  }
+  
+  div > #nomenatela {
+    display: inline-block;
+  }
+  
+  div > .Sair {
+    display: inline-block;
+  }
+  
+  .Sair {
+    background-color: #2c612f;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    padding: 11px 21px;
+    font-size: 17px;
+    position: absolute; /*Posso alterar as caixas de lugar, colocando as propriedades left, top, bottom e right*/
+    margin-top: 3.5px;
+    left: 1200px;
+    cursor: pointer;
+  }
+  
+  .Sair:hover{
+    background-color: rgb(139, 8, 8);
+  }
+  
+  #nomenatela {
+    background-color: #2c612f;;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    padding: 11px 21px;
+    font-size: 17px;
+    position: absolute;
+    left: 1010px; /*Posso alterar as caixas de lugar, colocando as propriedades left, top, bottom e right*/
+  
+    margin-top: 3.5px;
+  
+  }
+  
+  /* ^^ FINAL DA ESTILIZAÇÃO ^^ */
 
 .menu5 { /*Menu no topo da página*/
     margin: 0px; /*Espaço entre caixa e marguem da página*/
