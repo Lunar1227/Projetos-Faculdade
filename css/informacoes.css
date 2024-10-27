@@ -4,59 +4,52 @@ header { /*Imagem no topo*/
   background-position: center;
 }
 
-.primeiroul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.primeiroli {
-  position: relative;
-  display: inline-block;
-}
-
-#nomenatela {
-  background-color: #04AA6D;
-  padding: 10px;
-  color: white;
-  text-decoration: none;
-}
-
-.segundoul {
-  display: none;
-  position: absolute;
-  top: 100%; /* Posiciona abaixo do item pai */
-  left: 0;
-  background-color: grey;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: auto;
-}
-
-.primeiroli:hover .segundoul {
-  display: block; /* Mostra o submenu ao passar o mouse */
-}
-
-.segundoli {
-  padding: 10px;
-}
-
-.segundoli a {
-  color: white;
-  text-decoration: none;
-  display: block;
-}
-
-.segundoli:hover {
-  background-color: darkgrey;
-}
-
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+/*ESTILIZAÇÃO ONDE APARECE O NOME DO USUÁRIO E O BOTÃO DE SAIR*/
+
+div > #nomenatela {
+  display: inline-block;
+  z-index: 20;
+}
+
+div > .Sair {
+  display: inline-block;
+  z-index: 20;
+}
+
+.Sair {
+  background-color: #2c612f;
+  color:white;
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: none;
+  padding: 11px 21px;
+  font-size: 17px;
+  position: absolute; /*Posso alterar as caixas de lugar, colocando as propriedades left, top, bottom e right*/
+  margin-top: 3.5px;
+  left: 1200px;
+  cursor: pointer;
+}
+
+.Sair:hover{
+  background-color: rgb(139, 8, 8);
+}
+
+#nomenatela {
+  background-color: #2c612f;;
+  color:white;
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: none;
+  padding: 11px 21px;
+  font-size: 17px;
+  position: absolute;
+  left: 1010px; /*Posso alterar as caixas de lugar, colocando as propriedades left, top, bottom e right*/
+  margin-top: 3.5px;
+
 }
 
 .imagem  { /*Ajeitando a imagem*/
@@ -93,6 +86,7 @@ img {
   background-color: #468749; /*Cor da caixa*/
   text-indent: 40px; /*Recuo da linha*/
   text-align: center;
+  z-index: 10;
 }
 
 a { /*Os links no menu*/
@@ -125,9 +119,6 @@ h1 { /*Título do site*/
   font-size: 35px; /*Tamanho da fonte*/
 }
 
-section {
-  margin: 5%;
-}
 
 
 footer { /*Rodape completo*/
