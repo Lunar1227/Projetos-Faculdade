@@ -9,9 +9,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!--Link para utilização de ícones Font Awesome-->
 </head>
 <body>
+    <!-- Aqui fica a foto do Eco point, hospedada no CSS -->
     <header>
-    </header> 
+    </header>
+
+    <!-- Divs do nome do usuário e o botão de sair -->
+    <div class="dropdown">
+        <p class="button" id="nomenatela"></p>
+    </div>
+
+    <div>
+        <a class="Sair" href="telainicial.html" onmouseenter="vermelho()" onmouseout="verde()">Sair</a>
+    </div>
     
+    <!-- Script inserido para que, quando o usuário faça login, apareça seu nome no canto da tela -->
     <script>
         // Recupera o usuário logado do localStorage
         const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
@@ -24,29 +35,35 @@
         // Define o texto interno do elemento como o nome do usuário
         nomenatela.innerText = `Bem-vindo, ${usuarioLogado.login}!`;
     }
+        // Funções de evento, para quando o usuário posicionar o mouse sobre o botão 'Sair' fique vermelho,
+        //mas caso ele tire o botão, volta a ficar verde.
+
+        function vermelho(){
+            sair = document.getElementsByClassName('Sair')[0]
+            
+            sair.style.background='rgb(139, 8, 8)'
+        }
+
+        function verde(){
+            sair = document.getElementsByClassName('Sair')[0]
+            
+            sair.style.background='#2c612f'
+        }
+
     </script>
 
     
-
+    <!-- nav onde estão posicionado os menus -->
     <nav id="menu">
         <ul class="menu2">
-            <a href="#Sobre Nós">Sobre Nós</a>
-            <a href="./telainformacoes.html">Informações</a>
-            <a href="./telaongs.html">Ong's</a>
-            <a href="./telamapa.html">Mapa</a>
+            <a class="telasobrenos" href="#Sobre Nós">Sobre Nós</a>
+            <a class="telainformacoes" href="./telainformacoes.html">Informações</a>
+            <a class="telaongs" href="./telaongs.html">Ong's</a>
+            <a class="telamapa" href="./telamapa.html">Mapa</a>
         </ul>
-
-        <ul class="primeiroul">
-            <li class="primeiroli">
-                <a href="#" id="nomenatela"></a>
-                <ul class="segundoul">
-                    <li class="segundoli"><a href="#">Sair</a></li>
-                </ul>
-            </li>
-        </ul>
-
     </nav>
-        
+    
+    <!-- Section com conteúdos da página -->
     <br>
     <section>
         <h1>Sobre Nós</h1>
