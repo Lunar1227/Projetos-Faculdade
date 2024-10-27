@@ -10,7 +10,48 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /> <!-- Inclui o CSS do Leaflet, onde Leaflet é uma biblioteca JavaScript de código aberto que permite a criação de aplicativos de mapeamento virtuais-->
 </head>
 <body>
-    <header></header>
+     <!-- Aqui fica a foto do Eco point, hospedada no CSS -->
+     <header>
+    </header>
+
+    <!-- Divs do nome do usuário e o botão de sair -->
+    <div class="dropdown">
+        <p class="button" id="nomenatela"></p>
+    </div>
+
+    <div>
+        <a class="Sair" href="telainicial.html" onmouseenter="vermelho()" onmouseout="verde()">Sair</a>
+    </div>
+    
+    <!-- Script inserido para que, quando o usuário faça login, apareça seu nome no canto da tela -->
+    <script>
+        // Recupera o usuário logado do localStorage
+        const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
+    
+        // Verifica se o nome do usuário existe
+        if (usuarioLogado) {
+        // Seleciona o elemento onde quer exibir o nome
+        const nomenatela = document.getElementById('nomenatela');
+        
+        // Define o texto interno do elemento como o nome do usuário
+        nomenatela.innerText = `Bem-vindo, ${usuarioLogado.login}!`;
+    }
+        // Funções de evento, para quando o usuário posicionar o mouse sobre o botão 'Sair' fique vermelho,
+        //mas caso ele tire o botão, volta a ficar verde.
+
+        function vermelho(){
+            sair = document.getElementsByClassName('Sair')[0]
+            
+            sair.style.background='rgb(139, 8, 8)'
+        }
+
+        function verde(){
+            sair = document.getElementsByClassName('Sair')[0]
+            
+            sair.style.background='#2c612f'
+        }
+
+    </script>
     <nav id="menu">
         <ul class="menu5">
             <a href="./telasobrenos.html">Sobre Nós</a>
