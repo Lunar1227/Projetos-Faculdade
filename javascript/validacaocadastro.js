@@ -15,6 +15,7 @@ function generate_uuidv4() {
 function SalvarDados() {
     var usuario = document.getElementById('campousuario').value;
     var senha = document.getElementById('camposenha').value;
+    var email = document.getElementById('inserirEmail').value;
 
     // Quando a gente coloca o JSON.parse é para converter uma string em um objeto.
     //Criei uma variável chamada usuarios e coloquei um JSON.parse para que, toda vez que eu criar um novo usuário
@@ -27,7 +28,8 @@ function SalvarDados() {
     var novoUsuario = {
         id: generate_uuidv4(), // chama primeira função que eu expliquei acima.
         login: usuario,
-        senha: senha
+        senha: senha,
+        email: email
     };
 
     // Aqui a gente pega o a variável (usuarios) e Adiciona o novo usuário (objeto) ao array dessa forma abaixo:
@@ -189,7 +191,7 @@ function validarcadastro(event) {
     //aqui a gente chama a função acima, mas só se os dados forem devidamente validados.
     SalvarDados();
 
-    window.location.href="../html/telasobrenos.html"
+    window.location.href="../html/telalogin.html"
 
 }
 
