@@ -51,9 +51,15 @@ function SalvarDados() {
 //função que valida todos os campos de cadastro.
 function validarcadastro(event) {
 
+    var email = document.getElementById('inserirEmail').value;
+    
     event.preventDefault(); //essa função não deixa o formulário ser enviado caso a gente clicar no
     //cadastrar e tiver alguma coisa não preenchida.
 
+    if (email ===''){
+        alert('Por favor, informe um e-mail');
+        return false;
+    }
 
     //abaixo eu só coloquei as validações como comentário para poder fazer vários testes.
     // var nomecompleto = document.getElementById('nomecompleto').value;
@@ -179,13 +185,7 @@ function validarcadastro(event) {
     // }
 
 
-    // if (Inseriremail ===''){
-    //     alert('Por favor, informe um e-mail');
-    //     Inseriremail.focus();
-    //     return false;
-
-
-    // }
+    
     
 
     //aqui a gente chama a função acima, mas só se os dados forem devidamente validados.
